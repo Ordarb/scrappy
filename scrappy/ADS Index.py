@@ -10,7 +10,7 @@ class AruobaDieboldScottiBusinessConditionsIndex(object):
     def __init__(self):
         self.url_root = r'https://www.philadelphiafed.org'
         self.url = self.url_root + '/surveys-and-data/real-time-data-research/ads'
-        self.url_target = r'https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx?la=en&hash=6DF4E54DFAE3EDC347F80A80142338E7'
+        self.url_target = r'https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx'
 
     def run(self):
 

@@ -8,3 +8,4 @@ selenium
 bs4
 openpyxl
 datetime
+xlrd
