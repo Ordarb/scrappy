@@ -77,3 +77,34 @@ managers, as a group.
 
 As the name indicates, the NAAIM Exposure Index provides insight into the actual adjustments active risk managers have 
 made to client accounts over the past two weeks. Permission for commercial use required.
+
+## Geopolitical Risk Index (GPR Index)
+We are pleased to host the Geopolitical Risk Index developed by Dario Caldara and Matteo Iacoviello at the Federal 
+Reserve Board.
+
+DThe Caldara and Iacoviello GPR index reflects automated text-search results of the electronic srchives of 10 
+newspapers: Chicago Tribune, the Daily Telegraph, Financial Times, The Globe and Mail, The Guardian, the Los Angeles 
+Times, The New York Times, USA Today, The Wall Street Journal, and The Washington Post. Caldara and Iacoviello calculate 
+the index by counting the number of articles related to adverse geopolitical events in each newspaper for each month 
+(as a share of the total number of news articles).
+
+China Economic Uncertainty Index (CEPU)
+We are pleased to host newspaper-based indices of policy uncertainty in China developed by Steven J. Davis, Dingqian 
+Liu and Xuguang S. Sheng, based on their working paper, "Economic Policy Uncertainty in China Since 1949: The View 
+from Mainland Newspapers." They quantify uncertainty-related concepts from October 1949 onwards using two mainland 
+Chinese newspapers: the Renmin Daily and the Guangming Daily.
+
+To construct an Economic Policy Uncertainty Index for China, they first obtain monthly counts of articles that contain 
+at least one term in each of three term sets: Economics, Policy, and Uncertainty. Table 1 reports the terms in each set 
+using Chinese characters and the corresponding English translations. In a second step, they scale the raw monthly EPU 
+counts by the number of total articles for the same newspaper and month.
+
+## Twitter Market Uncertainty Index (TMU Index)
+We are pleased to introduce several new Twitter-based Economic Uncertainty (TEU) indices that run from June 2011 to the 
+present. It was developed by Thomas Renault (University Paris 1 Panthéon-Sorbonne) in conjunction with Scott R. Baker 
+(Northwestern), Nicholas Bloom (Stanford) and Steve Davis (University of Chicago).
+
+We first extract all messages (tweets) sent on Twitter in since June 2011 that contain keywords related to Uncertainty 
+and keywords related to the Economy.
+
+
