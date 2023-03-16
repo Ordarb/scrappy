@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 
 
-class AruobaDieboldScottiBusinessConditionsIndex(object):
+class ADSI(object):
 
     def __init__(self):
         self.url_root = r'https://www.philadelphiafed.org'
@@ -13,6 +13,11 @@ class AruobaDieboldScottiBusinessConditionsIndex(object):
         self.url_target = r'https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/ads/ads_index_most_current_vintage.xlsx'
 
     def run(self):
+        df = self.load_data()
+        #Todo: Transformation Check
+        return df
+
+    def load_data(self):
 
         if self.url_target is not None:
             url = self.url_target
@@ -47,6 +52,6 @@ class AruobaDieboldScottiBusinessConditionsIndex(object):
 
 if __name__ == '__main__':
 
-    obj = AruobaDieboldScottiBusinessConditionsIndex()
+    obj = ADSI()
     df = obj.run()
     print(df)

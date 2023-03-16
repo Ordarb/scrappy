@@ -13,6 +13,11 @@ class PartisanConflictIndex(object):
         self.url_target = None
 
     def run(self):
+        df = self.load_data()
+        #Todo: Transformation Check
+        return df
+
+    def load_data(self):
 
         if self.url_target is not None:
             url = self.url_target

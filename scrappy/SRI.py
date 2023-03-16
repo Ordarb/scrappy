@@ -3,12 +3,13 @@ import pandas as pd
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 
-class CFNAI(object):
+class SRI(object):
 
     def __init__(self):
-        self.url_target = r'https://www.chicagofed.org/-/media/publications/cfnai/cfnai-data-series-xlsx.xlsx'
+        self.url_target = r'https://www.clevelandfed.org/-/media/files/webcharts/systemicrisk/landing_systemicrisk.csv'
 
     def run(self):
         df = self.load_data()
@@ -17,9 +18,8 @@ class CFNAI(object):
 
     def load_data(self):
 
-        df = pd.read_excel(self.url_target, sheet_name='data')
+        df = pd.read_csv(self.url_target)
         df = self._format_file(df)
-
         return df
 
     @staticmethod
@@ -31,6 +31,6 @@ class CFNAI(object):
 
 if __name__ == '__main__':
 
-    obj = CFNAI()
+    obj = SRI()
     df = obj.run()
     print(df)

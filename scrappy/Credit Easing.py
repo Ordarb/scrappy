@@ -12,6 +12,11 @@ class CreditEasing(object):
         self.url_target = r'https://www.clevelandfed.org/-/media/files/webcharts/crediteasing/crediteasingbalancesheet.xls'
 
     def run(self):
+        df = self.load_data()
+        #Todo: Transformation Check
+        return df
+
+    def load_data(self):
 
         df = pd.read_excel(self.url_target, skiprows=1)
         df = self._format_file(df)

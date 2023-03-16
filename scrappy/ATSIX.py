@@ -13,6 +13,11 @@ class ATSIX(object):
         self.url_target = r'https://www.philadelphiafed.org/-/media/frbp/assets/surveys-and-data/atsix/atsix_vintages.xlsx'
 
     def run(self):
+        df = self.load_data()
+        #Todo: Transformation Check
+        return df
+
+    def load_data(self):
         ''' Returns the Inflation and Real Rate term structure expectation. '''
         # Inflation Term Structure
         inflation = pd.read_excel(self.url_target, sheet_name='InfExp')

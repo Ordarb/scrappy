@@ -14,6 +14,11 @@ class InflationModels(object):
         self.url_target = r'https://www.clevelandfed.org/-/media/files/webcharts/inflationexpectations/inflation-expectations.xlsx'
 
     def run(self):
+        df = self.load_data()
+        #Todo: Transformation Check
+        return df
+
+    def load_data(self):
 
         infl_expecations = pd.read_excel(self.url_target, sheet_name='Expected Inflation')
         infl_expecations = self._format_file(infl_expecations)
