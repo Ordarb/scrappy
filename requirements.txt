@@ -9,4 +9,3 @@ bs4
 openpyxl
 datetime
 xlrd
-pathlib

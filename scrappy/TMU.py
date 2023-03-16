@@ -28,7 +28,7 @@ class TMU(object):
         paths = [os.path.join(path, basename) for basename in files]
         path_to_excel = max(paths, key=os.path.getctime)
         df = pd.read_excel(path_to_excel)
-        df = self._format_file()
+        df = self._format_file(df)
 
         #todo: transformation?
         return df
