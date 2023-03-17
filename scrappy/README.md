@@ -88,7 +88,7 @@ Times, The New York Times, USA Today, The Wall Street Journal, and The Washingto
 the index by counting the number of articles related to adverse geopolitical events in each newspaper for each month 
 (as a share of the total number of news articles).
 
-China Economic Uncertainty Index (CEPU)
+## China Economic Uncertainty Index (CEPU)
 We are pleased to host newspaper-based indices of policy uncertainty in China developed by Steven J. Davis, Dingqian 
 Liu and Xuguang S. Sheng, based on their working paper, "Economic Policy Uncertainty in China Since 1949: The View 
 from Mainland Newspapers." They quantify uncertainty-related concepts from October 1949 onwards using two mainland 
@@ -107,4 +107,26 @@ present. It was developed by Thomas Renault (University Paris 1 Panthéon-Sorbon
 We first extract all messages (tweets) sent on Twitter in since June 2011 that contain keywords related to Uncertainty 
 and keywords related to the Economy.
 
+## Trade Policy Uncertainty (TPU Index)
+Trade Policy Uncertainty Index developed by Dario Caldara, Matteo Iacoviello, Patrick Molligo, Andrea Prestipino and 
+Andrea Raffo at the Federal Reserve Board.They construct a monthly index of Trade Policy Uncertainty (TPU Index) by 
+counting the frequency of joint occurrences of trade policy and uncertainty terms across major newspapers.
+
+
+## Equity Market Uncertainty Index (EMV Index)
+We construct our Index of Equity Market Uncertainty through an analysis of newspaper articles containing terms related 
+to equity market uncertainty. For this exercise, we use newspapers from Access World New's NewsBank service. We restrict 
+our attention to newspapers in the United States, of which NewsBank covers well over 1000 in recent years. These 
+newspapers range from large national papers like USA Today to small local newspapers.
+
+## Infectious Disease Equity Market Volatility Tracker (ID Index)
+Following our work in Baker, Bloom, Davis, and Kost (2019) and as seen here, we construct a newspaper-based Infectious 
+Disease Equity Market Volatility Tracker. This daily measure is available from January 1985 to the present and is 
+updated daily.
+
+Second, we obtain daily counts of newspaper articles that contain at least one term in each of E, M, V, and ID across 
+approximately 3,000 US Newspapers. Third, we scale the raw EMV-ID counts by the count of all articles in the same day. 
+In a final step, we multiplicatively rescale the resulting series mirroring our approach to scale a Categorical EMV 
+series in our Categorical EMV tracker. That is, we match the level of the VIX between 1990 and 2016 using the overall 
+EMV index and then scale this ID-EMV index to reflect the ratio of the ID-EMV articles to total EMV articles.
 
