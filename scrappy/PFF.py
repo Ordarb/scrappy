@@ -6,10 +6,10 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 
 
-class IDEMV(object):
+class PFF(object):
 
     def __init__(self):
-        self.url_target = r'https://www.policyuncertainty.com/media/All_Infectious_EMV_Data.csv'
+        self.url_target = r'https://www.frbsf.org/wp-content/uploads/sites/4/proxy-funds-rate-data.xlsx?20230302'
 
     def run(self):
         df = self.load_data()
@@ -18,25 +18,20 @@ class IDEMV(object):
 
     def load_data(self):
 
-        df = pd.read_csv(self.url_target, encoding='ISO-8859-1')
+        df = pd.read_excel(self.url_target, skiprows=9)
         df = self._format_file(df)
-
+        df = df.loc[:, 'Effective funds rate'] - df.loc[:, 'Proxy funds rate']
         return df
 
     @staticmethod
     def _format_file(df):
-        idx = df[['day', 'month', 'year']].applymap(str)
-        idx = idx.day + '.' + idx.month + '.' + idx.year
-        df.index = idx
-        df.index = [datetime.strptime(i, '%d.%m.%Y') for i in df.index]
-        df = df[['All_Infectious_EMV_Data']]
-        df.columns = ['ID-EMV']
+        df.set_index(df.columns[0], inplace=True)
         return df
 
 
 
 if __name__ == '__main__':
 
-    obj = IDEMV()
+    obj = PFF()
     df = obj.run()
     print(df)

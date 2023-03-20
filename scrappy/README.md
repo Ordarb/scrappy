@@ -119,14 +119,22 @@ to equity market uncertainty. For this exercise, we use newspapers from Access W
 our attention to newspapers in the United States, of which NewsBank covers well over 1000 in recent years. These 
 newspapers range from large national papers like USA Today to small local newspapers.
 
-## Infectious Disease Equity Market Volatility Tracker (ID Index)
-Following our work in Baker, Bloom, Davis, and Kost (2019) and as seen here, we construct a newspaper-based Infectious 
-Disease Equity Market Volatility Tracker. This daily measure is available from January 1985 to the present and is 
-updated daily.
 
-Second, we obtain daily counts of newspaper articles that contain at least one term in each of E, M, V, and ID across 
-approximately 3,000 US Newspapers. Third, we scale the raw EMV-ID counts by the count of all articles in the same day. 
-In a final step, we multiplicatively rescale the resulting series mirroring our approach to scale a Categorical EMV 
-series in our Categorical EMV tracker. That is, we match the level of the VIX between 1990 and 2016 using the overall 
-EMV index and then scale this ID-EMV index to reflect the ratio of the ID-EMV articles to total EMV articles.
+## Proxy Fund Rate
 
+This site presents a monthly series of the proxy funds rate, following Doh and Choi (2016) and Choi, Doh, Foerster, 
+and Martinez (2022). This measure uses public and private borrowing rates and spreads to infer the broader stance of 
+monetary policy. When the Federal Open Market Committee uses additional tools, such as forward guidance or changes in 
+the balance sheet, these policy actions affect financial conditions, which the proxy rate translates into an analogous 
+level of the federal funds rate.
+
+This measure uses a set of 12 financial variables, including Treasury rates, mortgage rates, and borrowing spreads to 
+assess the broader stance of monetary policy. Using principal components, common movements among the 12 financial 
+variables are extracted. The first three principal components are then mapped to levels of the federal funds rate, 
+where the mapping reflects the pre-2008 correlations between them. Until December 2008, the mapping is nearly exact 
+by construction; after 2008, the mapping from financial conditions to the funds rate diverges. This separation displays 
+how the proxy funds rate responds to developments in financial conditions such as forward guidance and balance sheet 
+operations. 
+
+The proxy rate can be interpreted as indicating what federal funds rate would typically be associated with prevailing 
+financial market conditions if these conditions were driven solely by the funds rate. 
