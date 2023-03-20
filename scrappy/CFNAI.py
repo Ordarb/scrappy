@@ -3,6 +3,7 @@ import pandas as pd
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 
 class CFNAI(object):
@@ -13,6 +14,9 @@ class CFNAI(object):
     def run(self):
         df = self.load_data()
         #Todo: Transformation Check
+        df['CFNAI'] = df['CFNAI'].clip(lower=-2, upper=2)
+        df['DIFFUSION'] = df['DIFFUSION'].clip(lower=-1, upper=1)
+        df['DIFFUSION'] = (df['DIFFUSION'] + 1) / 2
         return df
 
     def load_data(self):
@@ -33,4 +37,11 @@ if __name__ == '__main__':
 
     obj = CFNAI()
     df = obj.run()
+
+    df['DIFFUSION'].loc['1970':].plot()
+    plt.show()
+
+    df['CFNAI'].loc['1970':].plot()
+    plt.show()
+
     print(df)

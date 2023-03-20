@@ -3,6 +3,7 @@ import pandas as pd
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 
 class PartisanConflictIndex(object):
@@ -53,4 +54,8 @@ if __name__ == '__main__':
 
     obj = PartisanConflictIndex()
     df = obj.run()
+
+
+    df.plot()
+    plt.show()
     print(df)

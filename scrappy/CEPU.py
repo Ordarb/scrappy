@@ -39,4 +39,7 @@ if __name__ == '__main__':
 
     obj = CEPU()
     df = obj.run()
+    df.loc['2000':].plot()
+    plt.show()
+
     print(df)

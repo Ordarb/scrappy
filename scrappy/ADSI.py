@@ -3,6 +3,7 @@ import pandas as pd
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from datetime import datetime
+import matplotlib.pyplot as plt
 
 
 class ADSI(object):
@@ -15,6 +16,10 @@ class ADSI(object):
     def run(self):
         df = self.load_data()
         #Todo: Transformation Check
+        df = df.clip(lower=-1, upper=1)
+        df = (df + 1) / 2
+        df = df.rolling(20).mean()
+
         return df
 
     def load_data(self):
@@ -54,4 +59,14 @@ if __name__ == '__main__':
 
     obj = ADSI()
     df = obj.run()
+
+    df.loc['1980':].plot()
+    plt.show()
+
+    df.loc['2000':].plot()
+    plt.show()
+
+    df.loc['2010':].plot()
+    plt.show()
+
     print(df)

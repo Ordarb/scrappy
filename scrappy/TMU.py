@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 from selenium.webdriver.common.by import By
 import os
 import glob
+import time
+
 
 class TMU(object):
 
@@ -22,6 +24,7 @@ class TMU(object):
         driver = self.setup_webdriver()
         btn = driver.find_element(by=By.XPATH, value='//*[@id="fvsdk-container"]/div[1]/header/div[1]/div[1]/button')
         btn.click()
+        time.sleep(10)
 
         path = os.path.join(os.path.expanduser('~'), 'downloads')
         files = os.listdir(path)
