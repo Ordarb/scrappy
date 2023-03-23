@@ -10,3 +10,7 @@ openpyxl
 datetime
 xlrd
 git+ssh://git@github.com/Aionite-Capital/aionite_utils.git
+git+ssh://git@github.com/Aionite-Capital/aionite_dbhandler.git
+git+ssh://git@github.com/Aionite-Capital/aionite_mjolnir.git
+git+ssh://git@github.com/Aionite-Capital/Aionite.git
+git+ssh://git@github.com/Aionite-Capital/aionite_evohub.git

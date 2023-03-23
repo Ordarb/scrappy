@@ -48,9 +48,12 @@ class IndikatorOverview(object):
 
 if __name__ == '__main__':
 
-    indicator_list = [ADSI, CEPU, CFNAI, EMV, FRBSF, GPR, NAAIM, PartisanConflictIndex, SRI, TMU, TPU]
+    from scrappy.credit_card import CreditCardDefaults
+    from scrappy.loan_defaults import LoanDefaults
 
-
-    obj = IndikatorOverview(indicator_list)
-    df = obj.run()
-    print(df)
+    a = CreditCardDefaults().run()
+    b = LoanDefaults().run()
+    df = pd.concat([a, b], 1)
+    df.columns = ['Credit Card Defaults', 'Loan Defaults']
+    df.plot()
+    plt.show()
